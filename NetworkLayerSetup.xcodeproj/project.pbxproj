@@ -12,6 +12,13 @@
 		48D016E420F27B4D00061B7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D016E220F27B4D00061B7E /* Main.storyboard */; };
 		48D016E620F27B5800061B7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48D016E520F27B5800061B7E /* Assets.xcassets */; };
 		48D016E920F27B5800061B7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D016E720F27B5800061B7E /* LaunchScreen.storyboard */; };
+		48D016F320F27C1000061B7E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D016F220F27C1000061B7E /* Result.swift */; };
+		48D016F520F2865900061B7E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D016F420F2865900061B7E /* Endpoint.swift */; };
+		48D016F720F28B9200061B7E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D016F620F28B9200061B7E /* API.swift */; };
+		48D016F920F28C7800061B7E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D016F820F28C7800061B7E /* APIError.swift */; };
+		48D016FB20F2929500061B7E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D016FA20F2929500061B7E /* APIClient.swift */; };
+		48D016FD20F3426600061B7E /* MyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D016FC20F3426600061B7E /* MyClient.swift */; };
+		48D016FF20F357E900061B7E /* Model1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D016FE20F357E900061B7E /* Model1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		48D016E520F27B5800061B7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48D016E820F27B5800061B7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48D016EA20F27B5800061B7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D016F220F27C1000061B7E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		48D016F420F2865900061B7E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		48D016F620F28B9200061B7E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		48D016F820F28C7800061B7E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		48D016FA20F2929500061B7E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		48D016FC20F3426600061B7E /* MyClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClient.swift; sourceTree = "<group>"; };
+		48D016FE20F357E900061B7E /* Model1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,77 @@
 		48D016DD20F27B4D00061B7E /* NetworkLayerSetup */ = {
 			isa = PBXGroup;
 			children = (
+				48D0170820F38EFD00061B7E /* ViewControllers */,
+				48D016F120F27BB900061B7E /* Networking */,
+				48D016F020F27BA100061B7E /* Model */,
 				48D016DE20F27B4D00061B7E /* AppDelegate.swift */,
-				48D016E020F27B4D00061B7E /* ViewController.swift */,
 				48D016E220F27B4D00061B7E /* Main.storyboard */,
 				48D016E520F27B5800061B7E /* Assets.xcassets */,
 				48D016E720F27B5800061B7E /* LaunchScreen.storyboard */,
 				48D016EA20F27B5800061B7E /* Info.plist */,
 			);
 			path = NetworkLayerSetup;
+			sourceTree = "<group>";
+		};
+		48D016F020F27BA100061B7E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48D016FE20F357E900061B7E /* Model1.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48D016F120F27BB900061B7E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				48D0170720F36E3900061B7E /* Response */,
+				48D0170620F36E0300061B7E /* Manager */,
+				48D0170520F36DE400061B7E /* Request */,
+				48D0170420F36DA000061B7E /* ErrorHandling */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		48D0170420F36DA000061B7E /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				48D016F820F28C7800061B7E /* APIError.swift */,
+			);
+			path = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		48D0170520F36DE400061B7E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				48D016F420F2865900061B7E /* Endpoint.swift */,
+				48D016F620F28B9200061B7E /* API.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		48D0170620F36E0300061B7E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				48D016FA20F2929500061B7E /* APIClient.swift */,
+				48D016FC20F3426600061B7E /* MyClient.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		48D0170720F36E3900061B7E /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				48D016F220F27C1000061B7E /* Result.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		48D0170820F38EFD00061B7E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				48D016E020F27B4D00061B7E /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +212,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D016F320F27C1000061B7E /* Result.swift in Sources */,
+				48D016FB20F2929500061B7E /* APIClient.swift in Sources */,
 				48D016E120F27B4D00061B7E /* ViewController.swift in Sources */,
+				48D016F520F2865900061B7E /* Endpoint.swift in Sources */,
+				48D016F720F28B9200061B7E /* API.swift in Sources */,
 				48D016DF20F27B4D00061B7E /* AppDelegate.swift in Sources */,
+				48D016FF20F357E900061B7E /* Model1.swift in Sources */,
+				48D016FD20F3426600061B7E /* MyClient.swift in Sources */,
+				48D016F920F28C7800061B7E /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
