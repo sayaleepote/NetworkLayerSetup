@@ -19,7 +19,11 @@ class MyClient: APIClient {
     convenience init() {
         self.init(configuration: .default)
     }
-    
+}
+
+// MARK: - API Request calls
+
+extension MyCLient {
     //In the signature of the function we define the Class type that is the generic one in the API
     func getSomething(from endpoint: Endpoint, completion: @escaping (Result<Model2?, APIError>) -> Void) {
         
@@ -30,5 +34,5 @@ class MyClient: APIClient {
             return model2
         }, completion: completion)
     }
-
 }
+

@@ -1,5 +1,5 @@
 //
-//  Model1.swift
+//  Model1.swift, Model2.swift
 //  NetworkLayerSetup
 //
 //  Created by Sayalee on 7/9/18.

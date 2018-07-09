@@ -8,6 +8,8 @@
 
 import Foundation
 
+// Code for generic API calling and decoding of response
+
 protocol APIClient {
     var session: URLSession { get }
     func callAPI<T: Decodable> (with request: URLRequest, decode: @escaping (Decodable) -> T?,

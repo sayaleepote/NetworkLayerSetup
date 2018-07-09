@@ -30,6 +30,8 @@ public struct Endpoint {
     var queryItems: [URLQueryItem]?
 }
 
+// MARK: - Request Setup
+
 extension Endpoint {
     
     var urlComponents: URLComponents {

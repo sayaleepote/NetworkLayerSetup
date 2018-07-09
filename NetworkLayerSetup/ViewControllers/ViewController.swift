@@ -42,7 +42,7 @@ class ViewController: UIViewController {
                                           "Header-key2": "value2" ]
         
         let api: API = .api1
-        let endpoint: Endpoint = api.getAPI(queryItems: queryItem, headers: headers, body: body)
+        let endpoint: Endpoint = api.getAPIEndpoint(queryItems: queryItem, headers: headers, body: body)
         
         client.getSomething(from: endpoint) { [weak self] result in
             switch result {
