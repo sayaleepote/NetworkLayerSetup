@@ -23,7 +23,7 @@ class MyClient: APIClient {
 
 // MARK: - API Request calls
 
-extension MyCLient {
+extension MyClient {
     //In the signature of the function we define the Class type that is the generic one in the API
     func getSomething(from endpoint: Endpoint, completion: @escaping (Result<Model2?, APIError>) -> Void) {
         
